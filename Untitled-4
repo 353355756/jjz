@@ -1,0 +1,371 @@
+
+
+
+
+
+
+<html>
+	<head>
+
+		<title>北京交警</title>
+
+		<meta charset="UTF-8">
+		<meta name="content-type" content="text/html; charset=UTF-8"/>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+		<link rel="stylesheet" type="text/css"
+			href="/app_web/static_resources/css/homepage/swiper.css"> 
+		<link rel="stylesheet" type="text/css"
+			href="/app_web/static_resources/css/homepage/base.css">
+		<link rel="stylesheet" type="text/css"
+			href="/app_web/static_resources/css/homepage/home.css">
+		
+
+		<script
+			src="/app_web/static_resources/js/homepage/jquery-1.11.1.min.js"
+			type="text/javascript"></script>
+
+		<script src="/app_web/static_resources/js/homepage/move.js"
+			type="text/javascript"></script>
+		<script
+			src="/app_web/static_resources/js/homepage/md5.min.js"
+			type="text/javascript"></script>
+		<script src="/app_web/static_resources/js/homepage/swiper-3.3.1.min.js"
+			type="text/javascript"></script>
+		<script src="/app_web/static_resources/js/homepage/interactive.js"
+			type="text/javascript"></script>
+		
+			
+	    		
+	 <style>
+ /*提示弹窗*/
+	.tan{position: fixed;
+	    top: 60%;
+	    left:50%;
+	    -webkit-transform: translate(-50%, -50%);
+	    -moz-transform: translate(-50%, -50%);
+	    -ms-transform: translate(-50%, -50%);
+	    -o-transform: translate(-50%, -50%);
+	    transform: translate(-50%, -50%);
+	    width: 80%;
+	    padding: 0.5rem 0.2rem;
+	    background: rgba(0,0,0,0.7);
+	    text-align: center;
+	    color: white;
+	    border-radius: 0.1rem;
+	    z-index:100;
+	}
+	    .confirmBox{
+            display: none;
+            background: rgba(0, 0, 0, 0.498039);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 999;
+            width: 100%;
+            height: 100%;
+
+        }
+        .confirmBox .nuoProgress{
+          padding:26px 15px;
+          text-align: center;
+            background:#fff;
+            width:80%;
+            margin:30vh auto;
+            border-radius: 10px;
+        }
+        .confirmBox .nuoProgress .colorText{
+            color: #f00;
+        }
+        .confirmBox .nuoProgress .tishi{
+            font-size:13px;
+        }
+        .titleText{
+            font-size: 15px;
+            color: #232323;
+            font-weight: 600;
+            padding-top: 15px;
+        }
+        .nuoProgress .closeFont{
+            float:right;
+            margin-top: -18px;
+            display: inline-block;
+            height: 22px;
+            width: 22px;
+            border-radius: 50%;
+            border: 1px solid #999;
+            color: #999;
+            vertical-align: middle;
+            line-height: 18px;
+            font-size: 20px;
+            margin-right: -5px;
+        }
+        .nuoProgress p{
+          padding-top: 10px;
+        }
+        .footerBox{
+            margin-top: 10px;
+            text-align: center;
+        }
+        .footerBox #phoneTel{
+            color: #fff;
+            background: #0D70D8;
+            border-radius: 5px;
+            width: 70%;
+            height: 40px;
+            line-height: 40px;
+            border: none;
+        }
+        .footerBox #phoneTel a{
+            color: #fff;
+            font-size: 15px;
+            background: #0D70D8;
+            border-radius: 5px;
+            width: 100%;
+            height: 40px;
+            line-height: 40px;
+            display: inline-block;
+        }
+</style>
+		
+	</head>
+	<body>
+	
+
+	 <!--提交弹窗-->
+<div id="tanwin" class="tan" style="display:none;"></div>  	
+
+<div id="focus" class="swiper-container mycon" style="display:none;">
+	<div class="swiper-wrapper mybanner">
+	   <div class="swiper-slide differAdress"><a href="#"><img src="/app_web/static_resources/css/images/banner_0926.jpg" /></a></div>
+	    <div class="swiper-slide djfu"><a href="#"><img src="/app_web/static_resources/css/images/djfu1130.jpg" /></a></div>
+	   
+
+		
+
+
+
+
+		<div class="swiper-slide noIllegal"><a href="#"><img src="/app_web/static_resources/css/images/noIllegal.jpg" /></a></div>
+		<div class="swiper-slide"><a href="#"><img src="/app_web/static_resources/css/images/first-anniversary.png" /></a></div>
+		<div class="swiper-slide comityCrossing"><a href="#"><img src="/app_web/static_resources/css/images/comityCrossing.png" /></a></div>
+		
+
+	</div>
+	<div class="swiper-pagination">
+	</div>
+	<div class="dste">
+	  <span id="dateandweek"></span> 
+	  <span id="astrictcar"></span>
+	</div>
+	
+</div>
+ 		
+ 		
+	<!--  s: banner下方link  -->
+	<div class="w-block home-link">
+	
+		<ul>
+			
+			<li id="dzbdcx"><img src="/app_web/static_resources/css/images/icon4.jpg" alt="" /><p>交强险查询</p></li>
+			<li id="jtbb" class="tag-red"><img src="/app_web/static_resources/css/images/traffic_03.png" alt="" /><p>交通播报</p></li>
+			<li class="bmfu" data-souce="0"><img src="/app_web/static_resources/css/images/bm_03.png" alt="" /><p>便民服务</p></li>
+			<li class="yyyc"><img src="/app_web/static_resources/css/images/yyuc11271.png" alt="" /><p>预约验车</p></li>
+			
+
+		</ul>
+	
+	</div>
+	<!--  e: banner下方link  -->
+ 		<!-- 交强险信息到期提醒 -->
+	<div id="tbdqtx" class="none" >
+	    <button id="wyxbbtn">已续保点此关闭</button>
+	    <p class="tbtopp">
+	       <img src="/app_web/static_resources/css/images/hom_03.png" alt="" />
+	                交强险到期提醒
+	    </p>
+	    <div class="allcar" id="allcar">
+	    </div>
+	    <div class="btn_fs">
+		   	<a href="javascript:void(0)" id="ljtbbtn">
+		   	     <img src="/app_web/static_resources/css/images/gift_03.png" alt="" />
+		   		   APP用户续保专享大礼
+		   	</a>
+	   </div>
+	</div>	
+ 		
+ 		<div class="w-block accident-link">
+
+			<ul>
+				<li id="sgecl"><img src="/app_web/static_resources/css/images/w-icon1.png" alt="" ><p>事故e处理</p></li>
+				<li>
+					<div class="wfcx">
+						<img src="/app_web/static_resources/css/images/w-icon2.png" alt="" ><p>交通违法查缴</p>
+					</div>
+					<div id="jjzbl">
+						<img src="/app_web/static_resources/css/images/home_13.png" alt="" /><span style="width: 50%;display: inline-block;vertical-align: middle;margin-top: .19rem;">货运汽车和小型客车办理进京证</span>
+					</div>
+				</li>
+			</ul>
+ 		
+ 		</div>
+ 		
+<!--  		<div class="w-block service-link bmfu" data-souce="3"> -->
+
+
+<!--  			<p>车主放心</p> -->
+<!--  			<p>安全驾驶</p> -->
+
+ 		
+<!--  		</div> -->
+
+<div class="w-block service-link qcpx" data-souce="3">
+ 		    <img src="/app_web/static_resources/css/images/qcpx.jpg" width="100%"/>
+ </div>
+ 	   	
+    <!-- 掌上122 -->
+    <div class="confirmBox">
+        <div class="nuoProgress">
+            <span class="closeFont">×</span>
+            <h4 class="titleText">欢迎使用北京交警114挪车服务(测试)</h4>
+            <p>点击"立即挪车"后将自动拨打114,</p>
+            <p style="font-size:15px;">按<span class="colorText">8号键</span>可进入挪车专席进行挪车</p>
+            <p class="colorText tishi">温馨提示: 挪车过程中,请您文明用语!</p>
+            <div class="footerBox">
+                <button  id="phoneTel">
+                    <a href="tel:114">立即挪车</a>
+                </button>
+            </div>
+        </div>
+    </div>
+ 	<div class="w-block service-link" style="padding:0.2rem 0;">
+ 		<p class="modelp"></p>
+ 		<ul class="model">
+ 		    <li class="ydbj">
+				<img src="/app_web/static_resources/css/images/122icon_06.png" alt="" />
+				<h3>
+				拥堵报警
+				</h3>
+		    </li>
+		     <li class="ncqz">
+				<img src="/app_web/static_resources/css/images/122icon_03.png" alt="" class="left"/>
+				<h3 class="left">
+				挪车求助
+				</h3>
+		    </li>
+		     <li class="ywzx">
+				<img src="/app_web/static_resources/css/images/122icon_09.png" alt="" />
+				<h3>
+				业务咨询
+				</h3>
+		    </li>
+ 		</ul>
+ 		<ul class="model2">
+ 		    <li class="qkfy">
+				<img src="/app_web/static_resources/css/images/122icon_21.png" alt="" />
+				<h3>
+				情况反映
+				</h3>
+		    </li>
+		     <li class="cxts">
+				<img src="/app_web/static_resources/css/images/122icon_18.png" alt="" />
+				<h3>
+				出行提示
+				</h3>
+		    </li>
+		     <li class="wfjb">
+				<img src="/app_web/static_resources/css/images/122icon_15.png" alt="" />
+				<h3>
+				违法举报
+				</h3>
+		    </li>
+		      <li class="yjjd">
+				<img src="/app_web/static_resources/css/images/122icon_24.png" alt="" />
+				<h3>
+				意见建议
+				</h3>
+		    </li>
+ 		</ul>
+ 	</div>
+ 	
+ 	<!-- 掌上122 -->
+	
+	
+	<ul class="jiaojing jiaojing1" style="border-bottom: 1px solid #dcdcdc;">
+<!-- 	    <li class="cjg"> -->
+
+<!-- 			<h3> -->
+<!-- 			车驾管业务 -->
+<!-- 			</h3> -->
+<!-- 		</li> -->
+ 		<li class="yyyc">
+			<img src="/app_web/static_resources/css/images/yyyc11-27.png" alt="" />
+			<h3>
+			预约验车
+			</h3>
+		</li>
+		 <li class="syjy">
+			<img src="/app_web/static_resources/css/images/syjy11-27.png" alt="" />
+			<h3>
+			网上审验教育
+			</h3>
+		</li>
+		 <li class="bszn">
+			<img src="/app_web/static_resources/css/images/bszn11-27.png" alt="" />
+			<h3>
+			办事指南
+			</h3>
+		</li>
+	
+		
+
+	</ul>
+	<ul class="jiaojing jiaojing1" style="border-bottom: 1px solid #dcdcdc;">
+		<li id="lkdh">
+			<img src="/app_web/static_resources/css/images/home_8.png" alt="" />
+			<h3>
+			路况导航
+			</h3>
+		</li>
+		<li class="aqxc">
+			<img src="/app_web/static_resources/css/images/home_4.png" alt="" />
+			<h3>
+			安全宣传
+			</h3>
+		</li>
+		<li class="jjdt">
+			<img src="/app_web/static_resources/css/images/home_5.png" alt="" />
+			<h3>
+			交管新闻
+			</h3>
+		</li>
+	</ul>
+	<ul class="jiaojing jiaojing1">
+		<li id="jtggxq">
+			<img src="/app_web/static_resources/css/images/homeicon_11.png" alt="" />
+			<h3>
+			 交通公告
+			</h3>
+		</li> 
+
+		<li id="jwgk">
+			<img src="/app_web/static_resources/css/images/homeicon_14.png" alt="" />
+			<h3>
+			警务公开
+			</h3>
+		</li>
+		<li class="jtbb">
+		<img src="/app_web/static_resources/css/images/jtbb11-27.png" alt=""><h3>交通播报</h3>
+		</li>
+	</ul>
+	
+	<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1262997666'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s13.cnzz.com/z_stat.php%3Fid%3D1262997666' type='text/javascript'%3E%3C/script%3E"));</script>
+	<script>
+		$('a[title=站长统计]').hide();
+		
+	</script>
+</body>
+</html>
+
